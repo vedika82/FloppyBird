@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 1d1367629713051bab04141606f624a3
+guid: 25b89425e8f13a254a2d33cc923e1e7f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2279887056553325147
-    second: rahulmeme_0
+      213: -6574774765369655121
+    second: rahulsaddownload_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 250
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: rahulmeme_0
+      name: rahulsaddownload_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 375
-        height: 447
+        width: 457
+        height: 545
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5adc02a2dc63c50e0800000000000000
-      internalID: -2279887056553325147
+      spriteID: fa080ff7f25b1c4a0800000000000000
+      internalID: -6574774765369655121
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      rahulmeme_0: -2279887056553325147
+      rahulsaddownload_0: -6574774765369655121
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
