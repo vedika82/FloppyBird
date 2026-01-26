@@ -1,8 +1,10 @@
-using System.Numerics;
-// using System.Threading.Tasks.Dataflow;
+using UnityEngine; 
 using UnityEngine;
-// using UnityEngine.Quaternion;
+using UnityEngine.SceneManagement;
+using System.Collections;
 using System.Collections.Generic;
+using System.Xml.Serialization;
+
 
 public class PipeSpawner : MonoBehaviour
 {
@@ -12,6 +14,10 @@ public class PipeSpawner : MonoBehaviour
     public  float spawnInterval=3f;
 
     private float timer;
+
+    //min and max Y position where pipes can be spawned
+    public float minYposition = -1f;
+    public float maxYposition = 1f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -26,8 +32,13 @@ public class PipeSpawner : MonoBehaviour
 
     //timer for after every 2 sc the pipes are spawned 
         if (timer>= spawnInterval)
-        {//where do we have to apply this spawn on 
-            Instantiate(pipePrefab, Spawnpoint.position , UnityEngine.Quaternion.identity);
+{
+            //generate random numbers between min and max
+            float randomYposition = Random.Range(minYposition,maxYposition);
+            //have to spawn pipes between those random no
+            Vector3 spawnPosition = new Vector3 (Spawnpoint.position.x ,  randomYposition,Spawnpoint);
+             //where do we have to apply this spawn on 
+            Instantiate(pipePrefab, spawnPosition , UnityEngine.Quaternion.identity);
             timer=0f;
         }
     }
