@@ -9,7 +9,7 @@ public class PipeSpawner : MonoBehaviour
 
     public GameObject pipePrefab;
     public Transform Spawnpoint;
-    public  float spawnInterval=2f;
+    public  float spawnInterval=3f;
 
     private float timer;
 
