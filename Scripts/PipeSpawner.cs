@@ -16,8 +16,8 @@ public class PipeSpawner : MonoBehaviour
     private float timer;
 
     //min and max Y position where pipes can be spawned
-    public float minYposition = -1f;
-    public float maxYposition = 1f;
+    public float minYposition = -2f;
+    public float maxYposition = 2f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -36,9 +36,9 @@ public class PipeSpawner : MonoBehaviour
             //generate random numbers between min and max
             float randomYposition = Random.Range(minYposition,maxYposition);
             //have to spawn pipes between those random no
-            Vector3 spawnPosition = new Vector3 (Spawnpoint.position.x ,  randomYposition,Spawnpoint);
+            Vector3 spawnPosition = new Vector3 (Spawnpoint.position.x ,  randomYposition,Spawnpoint.position.z);
              //where do we have to apply this spawn on 
-            Instantiate(pipePrefab, spawnPosition , UnityEngine.Quaternion.identity);
+            Instantiate(pipePrefab, spawnPosition , Quaternion.identity);
             timer=0f;
         }
     }
