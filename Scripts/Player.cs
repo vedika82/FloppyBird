@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 using System.Collections;
 using System.Collections.Generic;
 using System.Xml.Serialization;
+using System.Runtime.CompilerServices;
 
 
 
@@ -12,7 +13,7 @@ public class Player : MonoBehaviour
 
     private Rigidbody2D rb;
     public float jumpForce;
-
+    public string levelName;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -31,6 +32,15 @@ public class Player : MonoBehaviour
     
 
 }    
+    }
+
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject == "Pipe")
+        {
+            Scene.Mananger.LoadScene(levelName);
+        }
     }
 }
  
