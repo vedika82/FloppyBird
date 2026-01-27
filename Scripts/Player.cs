@@ -34,12 +34,12 @@ public class Player : MonoBehaviour
 }    
     }
 
-
+//if touched pipe then level restarts the code is below
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject == "Pipe")
+        if (collision.gameObject.tag =="Pipe")
         {
-            Scene.Mananger.LoadScene(levelName);
+            SceneManager.LoadScene(levelName);
         }
     }
 }
