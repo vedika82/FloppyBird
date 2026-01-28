@@ -14,11 +14,21 @@ public class Player : MonoBehaviour
     private Rigidbody2D rb;
     public float jumpForce;
     public string levelName;
+    private Vector2 startPosition;
+    // private SpriteRenderer sr;
+
+
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         rb= GetComponent<Rigidbody2D>();
+            
+    //     rb.isKinematic = true;
+    //         sr=GetComponent<SpriteRenderer>();
+    // startPosition = rb.position;
+
     }
 
     // Update is called once per frame
@@ -38,6 +48,19 @@ public class Player : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag =="Pipe")
+        {
+            SceneManager.LoadScene(levelName);
+        }
+        //we need to access the scoring pipe
+        else if (collision.gameObject.tag == "Scoring")
+        {
+            FindObjectOfType<Scoring>().IncreaseScore();
+        }
+    }
+
+        private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag =="Ground")
         {
             SceneManager.LoadScene(levelName);
         }
