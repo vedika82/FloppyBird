@@ -458,10 +458,10 @@ MonoBehaviour:
   jumpForce: 10
   levelName: level1
   score: 0
-  scoringAmount: 0
-  scoreText: {fileID: 0}
-  gameover: {fileID: 0}
-  gameovertext: {fileID: 0}
+  scoringAmount: 1
+  scoreText: {fileID: 55713333}
+  gameover: {fileID: 1588414407}
+  gameovertext: {fileID: 1781252942}
 --- !u!1 &431944060
 GameObject:
   m_ObjectHideFlags: 0
@@ -496,7 +496,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 33, y: 0}
+  m_AnchoredPosition: {x: 23.102, y: 115.07}
   m_SizeDelta: {x: 1293.5544, y: 330.13}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &431944062
@@ -1220,7 +1220,7 @@ GameObject:
   - component: {fileID: 1781252943}
   - component: {fileID: 1781252942}
   m_Layer: 5
-  m_Name: score
+  m_Name: final score
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1242,8 +1242,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 28.051, y: -311.36}
-  m_SizeDelta: {x: 1283.6564, y: 292.5898}
+  m_AnchoredPosition: {x: 28.051, y: -331.23346}
+  m_SizeDelta: {x: 1283.6564, y: 495.9984}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1781252942
 MonoBehaviour:
