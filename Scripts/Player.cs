@@ -111,5 +111,21 @@ public class Player : MonoBehaviour
           
      }
 
+
+     public void RestartLevel()
+    {   //to make time normal 
+        Time.timeScale =1f;
+        //to restart level
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        
+    }
+
+      public void LoadMenu()
+    {
+        Time.timeScale =1f;
+        //to go to main menu
+        SceneManager.LoadScene(0);
+        
+    }
 }
          
