@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Xml.Serialization;
 using System.Runtime.CompilerServices;
 // using Scoring;
+using UnityEngine.UI;
 
 
 
@@ -18,6 +19,13 @@ public class Player : MonoBehaviour
     private Vector2 startPosition;
     // private SpriteRenderer sr;
 
+    //scoring script here ctrl v
+    public int score;
+    public int scoringAmount;
+    public Text scoreText;
+
+    public GameObject gameover;
+    public Text gameovertext;
 
 
 
@@ -30,6 +38,8 @@ public class Player : MonoBehaviour
     //         sr=GetComponent<SpriteRenderer>();
     // startPosition = rb.position;
 
+    //dont want gameover screen first
+    gameover.SetActive(false);
     }
 
     // Update is called once per frame
@@ -48,12 +58,14 @@ public class Player : MonoBehaviour
     {
         if (collision.gameObject.tag =="Pipe")
         {
-            SceneManager.LoadScene(levelName);
+            // SceneManager.LoadScene(levelName);
+            GameOverMechanics();
         }
         //we need to access the scoring pipe
         else if (collision.gameObject.tag == "Scoring")
-        {
-            FindObjectOfType<Scoring>().IncreaseScore();
+        {   //to call fxn from a differnt script
+            // FindObjectOfType<Scoring>().IncreasScore();
+            IncreaseScore();
         }
     }
 
@@ -61,8 +73,32 @@ public class Player : MonoBehaviour
     {
         if (collision.gameObject.tag =="Ground")
         {
-            SceneManager.LoadScene(levelName);
+            // SceneManager.LoadScene(levelName);
+            GameOverMechanics();
+
         }
     }
+
+     public void IncreaseScore()
+    {
+        score=score+scoringAmount;
+        //to store and show on screen we done here type casting with .ToString
+        scoreText.text = score.ToString();
+        Debug.Log(score);
+
+    
+    }
+
+        public void GameOverMechanics()
+    {
+        gameover.SetActive(true);
+        
+        gameovertext.text ="SCORE:" + score;
+
+        //time to freez
+        Time.timeScale =0f;
+          
+     }
+
 }
          
