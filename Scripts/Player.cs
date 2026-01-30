@@ -27,7 +27,10 @@ public class Player : MonoBehaviour
     public GameObject gameover;
     public Text gameovertext;
 
+    private int restartbutton;
 
+    public Button menuButton;
+    public Button restartButton;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -39,7 +42,10 @@ public class Player : MonoBehaviour
     // startPosition = rb.position;
 
     //dont want gameover screen first
-    gameover.SetActive(false);
+        gameover.SetActive(false);
+        menuButton.gameObject.SetActive(false);
+        restartButton.gameObject.SetActive(false);
+
     }
 
     // Update is called once per frame
@@ -97,6 +103,11 @@ public class Player : MonoBehaviour
 
         //time to freez
         Time.timeScale =0f;
+
+        restartButton.gameObject.SetActive(true);
+        menuButton.gameObject.SetActive(true);
+
+
           
      }
 
