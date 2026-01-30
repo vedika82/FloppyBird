@@ -19,7 +19,8 @@ public class Pipes : MonoBehaviour
     void Update()
     {//done to move the pipes to the left 
         transform.Translate(Vector3.left * moveSpeed * Time.deltaTime);
-
+       
+        //to destroy the pipes out of frame
         if (transform.position.x<-15)
         {
             Destroy(gameObject);

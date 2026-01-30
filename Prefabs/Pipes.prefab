@@ -177,6 +177,7 @@ Transform:
   m_Children:
   - {fileID: 3302368862257675056}
   - {fileID: 8941080179932871475}
+  - {fileID: 5085801968810737899}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6469072406298940621
@@ -192,6 +193,84 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Pipes
   moveSpeed: 2
+--- !u!1 &9133260259753816988
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5085801968810737899}
+  - component: {fileID: 7211220669461869683}
+  m_Layer: 0
+  m_Name: Scoringzone
+  m_TagString: Scoring
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5085801968810737899
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9133260259753816988}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.8852661, z: -0, w: -0.46508485}
+  m_LocalPosition: {x: 4.73, y: -0.58744, z: 0}
+  m_LocalScale: {x: -2.7885, y: 0.725, z: -2.8258}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 934508467741706889}
+  m_LocalEulerAnglesHint: {x: 0, y: -235.431, z: 0}
+--- !u!61 &7211220669461869683
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9133260259753816988}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0.054885067, y: 0.47910547}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 0.23160718, y: 5.791054}
+  m_EdgeRadius: 0
 --- !u!1 &9212803738360998848
 GameObject:
   m_ObjectHideFlags: 0
